@@ -88,6 +88,11 @@ async def next_page(bot, query):
         off_set = None
     else:
         off_set = offset - 10
+     # How to Download button
+
+    btn.append(
+    [InlineKeyboardButton(text="⚡ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ⚡", url='https://t.me/TrockersLinks/7')]
+)
     if n_offset == 0:
         btn.append(
             [InlineKeyboardButton("⏪ BACK", callback_data=f"next_{req}_{key}_{off_set}"),
@@ -659,7 +664,14 @@ async def auto_filter(client, msg, spoll=False):
             ]
             for file in files
         ]
+        
+    btn.append(
+    [InlineKeyboardButton(text="⚡ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ⚡", url='https://t.me/TrockersLinks/7')]
+)
 
+    
+    
+    
     if offset != "":
         key = f"{message.chat.id}-{message.id}"
         BUTTONS[key] = search
